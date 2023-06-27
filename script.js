@@ -34,8 +34,6 @@ const products = [
   new Product("https://picsum.photos/200", "Cargo Pants", 1400, "pantalones")
 ];
 
-console.log(products);
-
 
 document.getElementById("popup").style.display = "none";
 document.getElementById("image").addEventListener("click", function(){
@@ -53,3 +51,12 @@ document.getElementById("buttonPopup").addEventListener("click", function() {
     let popupMenu = document.getElementById("popup");
     popupMenu.style.display = "none";
 });
+
+
+let productsFiltered = Array.from(products);
+const searchbar = document.getElementById("searchbar")
+searchbar.addEventListener("input", function(){
+    const filteredValue = searchbar.value;
+    productsFiltered = products.filter(e=>e.category===filteredValue);
+    console.log(productsFiltered);
+})
