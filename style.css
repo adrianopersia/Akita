@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+*{
+    font-family: 'Inconsolata', monospace;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #242020;
+}
+header{
+    align-items: center;
+    background-color: #574848;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    box-shadow: 0 10px 6px #574848;
+    height: 100px;
+}
+.logo{
+    grid-column: 2/3;
+    height: 60px;
+}
+.cart{
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#image{
+    padding-left: 8px;
+    grid-column: 3/4;
+    height: 60px;
+    cursor: pointer;
+}
+.cart img{
+    height: 60px;
+}
+#popup{
+    height: 35%;
+    width: 90%;
+    background: #5C5454;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: left;
+    z-index:10;
+}
+.wrapper .search-input{
+    margin: 2%;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+.wrapper .search-input input{
+    width: 85%;
+    background-color: #4A4242;
+    height: 25px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+#popup ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+}  
+#popup li{
+    padding: 2%;
+    border-bottom: 1px solid black;
+    width: 80%;
+    margin-left: 10px;
+}
+#popup li a{
+    text-decoration: none;
+    color: white;
+}
+#popup li a:hover{
+    color: grey;
+}
+#popup button{
+    width: 20%;
+    display: block;
+    margin: 20px auto;
+    background-color: #4A4242;
+    color: white;
+    padding: 10px 0;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+#popup button:hover{
+    background-color: grey;
+}
+.carousel{
+    padding: 10%;
+    display: flex;
+    width: 80%;
+    height: 300px;
+}
+.carousel img{
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+.carousel img:hover{
+    cursor: crosshair;
+    width: 100px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+.text1{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background-color: #574848;
+    border-radius: 20px;
+    height: 20px;
+    width: 60%;
+}
+.p1{
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 1%;
+}
+.text2{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 40px;
+    background-color: #574848;
+    border-radius: 20px;
+    width: 80%;
+    height: 10px;
+    justify-content: center;
+}
+.p2{
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+
