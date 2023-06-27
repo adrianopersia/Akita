@@ -6,6 +6,7 @@ body{
     padding: 0;
     margin: 0;
     background-color: #242020;
+    height: 2200px;
 }
 header{
     align-items: center;
@@ -48,12 +49,12 @@ header{
     text-align: left;
     z-index:10;
 }
-.wrapper .search-input{
+.wrapper .searchInput{
     margin: 2%;
     margin-left: 10px;
     border-radius: 5px;
 }
-.wrapper .search-input input{
+.wrapper .searchInput input{
     width: 85%;
     background-color: #4A4242;
     height: 25px;
@@ -61,6 +62,20 @@ header{
     border: none;
     border-radius: 5px;
     padding: 5px;
+}
+.wrapper .searchInput .suggestionsItems{
+    list-style: none;
+    padding: 8px 12px;
+    width: 100%;
+    cursor: default;
+    border-radius: 3px;
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+}
+.wrapper .searchInput .suggestionsItems:hover{
+    background-color: grey;
+    cursor: pointer;
 }
 #popup ul{
     list-style: none;
@@ -127,7 +142,7 @@ header{
     width: 60%;
 }
 .p1{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Inconsolata', monospace;
     color: white;
     margin: 1%;
 }
@@ -143,7 +158,7 @@ header{
     justify-content: center;
 }
 .p2{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Inconsolata', monospace;
     color: white;
     font-size: 30px;
     text-align: center;
@@ -151,4 +166,156 @@ header{
     margin-bottom: 20px;
 }
 
+.mainContainer .imageIndexContainer{
+    display: flex;
+    padding: 10%;
+    padding-top: 5%;
+    justify-content: center;
+}
+.mainContainer .imageIndexContainer .container{
+    position: relative;
+    display: inline-block;
+}
+.mainContainer .imageIndexContainer .container .button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: #4A4242;
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.mainContainer .imageIndexContainer .container .button:hover{
+    background-color: grey;
+}
+.mainContainer .imageIndexContainer .imageIndex{
+    height: 300px;
+}
+.mainContainer .imageIndexContainer .productName{
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    font-size: 30px;
+    margin: 0;
+}
+.mainContainer .imageIndexContainer div{
+    padding: 5%;
+    padding-top: 0;
+}
+.mainContainer .imageIndexContainer .priceBackground{
+    background-color: #574848;
+    color: white;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 30px;
+}
+#buttonProduct{
+    width: 40%;
+    display: block;
+    margin: 20px auto;
+    background-color: #4A4242;
+    color: white;
+    padding: 10px 0;
+    border: 0;
+    outline: none;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+footer{
+    background-color: #574848;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 10px 0 6px #574848;
+    height: 500px;
+}
+footer .footerMenu{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    padding: 0;
+    margin: 20px;
+    list-style: none;
+}
+footer .footerMenu li{
+    padding: 10px;
+}
+footer .footerMenu li a{
+    font-family: 'Inconsolata', monospace;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    border-bottom: 2px solid black;
+    padding: 10px;
+    padding-left: 0;
+}
+footer .footerMenu li a:hover{
+    color: grey;
+}
+footer .footerRight{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    padding: 0;
+    margin: 0;
+}
+footer .footerRight i{
+    padding: 5%;
+    font-size: 60px;
+}
+.footerRight .text3{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    background-color: #242020;
+    border-radius: 20px;
+    width: 60%;
+    height: 10px;
+    justify-content: center;
+}
+.footerRight .text3 .p3{
+    font-family: 'Inconsolata', monospace;
+    color: white;
+    font-size: 30px;
+    text-align: left;
+    padding-left: 10%;
+    margin: 0;
+    margin-bottom: 20px;
+}
+.footerBelow{
+    grid-row: 2/3;
+    grid-column: 1/3;
+}
+.footerBelow .text4{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    background-color: #242020;
+    border-radius: 20px;
+    width: 60%;
+    height: 10px;
+    justify-content: center;
+    margin-left: 5%;
+}
+.footerBelow .text4 .p4{
+    font-family: 'Inconsolata', monospace;
+    color: white;
+    font-size: 25px;
+    text-align: left;
+    padding: 5%;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+footer .footerBelow .cardIcon{
+    height: 60px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
 
