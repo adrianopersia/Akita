@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Akita Inc.</title>
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
 </head>
 <body>
     <header>
         <div class="cart">
             <img src="/Akita/107831.png" alt="">
         </div>
-        <img href="index.html" class="logo" src="/Akita/akitainclogonegro.png" alt="">
+        <img href="/index.html" class="logo" src="/Akita/akitainclogonegro.png" alt="">
         <img src="/Akita/13838.png" id="image" alt="Image">
         <div id="popup">
             <div class="wrapper">
@@ -25,8 +25,8 @@
                 </div>
             </div>
             <ul>
-              <li><a href="index.html">INICIO</a></li>
-              <li><a href="/pages/products.html">PRODUCTOS</a></li>
+              <li><a href="/index.html">INICIO</a></li>
+              <li><a href="./products.html">PRODUCTOS</a></li>
               <li><a href="">CONTACTO</a></li>
               <li><a href="">CARRITO</a></li>
               <li><a href="">USUARIO</a></li>
@@ -34,17 +34,29 @@
             <button id="buttonPopup">Volver</button>
         </div>
     </header>
+
     <main>
-        <section class="carousel">
-            <img src="/Akita/IMG_4260.jpg" alt="">
-            <img src="/Akita/IMG_3420.jpg" alt="">
-            <img src="/Akita/IMG_3417.jpg" alt="">
+        <section class="categories" id="cat">
+            <p>Categorias</p>
+            <i class="fa-solid fa-arrow-down" id="cat" style="color: #ffffff;"></i>
         </section>
-        <div class="text1">
-            <p class="p1">ENVÍOS A TODO EL PAÍS</p>
-        </div>
-        <div class="text2">
-            <p class="p2">NOVEDADES</p>
+        <div id="popupProduct">
+            <div class="wrapper">
+                <div class="searchInput">
+                    <input id="searchBar" type="text" placeholder="Buscar...">
+                    <li class="suggestionsItems">Remeras</li>
+                    <li class="suggestionsItems">Pantalones</li>
+                    <li class="suggestionsItems">Buzos</li>
+                    <li class="suggestionsItems">Chalecos</li>
+                </div>
+            </div>
+            <ul>
+              <li><a href="">REMERAS</a></li>
+              <li><a href="">PANTALONES</a></li>
+              <li><a href="">BUZOS</a></li>
+              <li><a href="">CHALECOS</a></li>
+            </ul>
+            <button id="buttonPopup">Volver</button>
         </div>
         <section class="mainContainer">
             <div class="imageIndexContainer">
@@ -77,11 +89,11 @@
                     <p class="priceBackground">$5.000</p></div>
             </div>
         </section>
-        <button href="" id="buttonProduct">Ver Más</button>
     </main>
+
     <footer>
         <ul class="footerMenu">
-            <li><a href="index.html">INICIO</a></li>
+            <li><a href="/index.html">INICIO</a></li>
             <li><a href="/pages/products.html">PRODUCTOS</a></li>
             <li><a href="">CONTACTO</a></li>
             <li><a href="">CARRITO</a></li>
@@ -107,8 +119,9 @@
 
 
     <script src="https://kit.fontawesome.com/54b9c45c97.js" crossorigin="anonymous"></script>
-    <script src="./models/product.js"></script>
-    <script src="script.js"></script>
-    
+    <script src="/models/product.js"></script>
+    <script src="/script.js"></script>
+
+
 </body>
 </html>

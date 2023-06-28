@@ -2,6 +2,9 @@
 *{
     font-family: 'Inconsolata', monospace;
 }
+
+/* INDEX */
+
 body{
     padding: 0;
     margin: 0;
@@ -22,6 +25,7 @@ header{
 .logo{
     grid-column: 2/3;
     height: 60px;
+    cursor: pointer;
 }
 .cart{
     grid-column: 1/2;
@@ -318,4 +322,71 @@ footer .footerBelow .cardIcon{
     margin-left: 20px;
     margin-top: 20px;
 }
+
+/* PRODUCTS */
+
+.categories{
+    font-family: 'Inconsolata', monospace;
+    font-size: 30px;
+    color: white;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+.categories p{
+    display: inline;
+    text-decoration: underline;
+}
+.categories p:hover{
+    cursor: pointer;
+    color: grey;
+}
+#popupProduct{
+    height: 35%;
+    width: 90%;
+    background: #5C5454;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: left;
+    z-index:10;
+}
+#popupProduct ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+}  
+#popupProduct li{
+    padding: 2%;
+    border-bottom: 1px solid black;
+    width: 80%;
+    margin-left: 10px;
+}
+#popupProduct li a{
+    text-decoration: none;
+    color: white;
+}
+#popupProduct li a:hover{
+    color: grey;
+}
+#popupProduct button{
+    width: 20%;
+    display: block;
+    margin: 20px auto;
+    background-color: #4A4242;
+    color: white;
+    padding: 10px 0;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+#popupProduct button:hover{
+    background-color: grey;
+}
+
+
 

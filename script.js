@@ -1,6 +1,8 @@
 const products = Product.getFakeData();
 
 
+
+/* MENU  */
 document.getElementById("popup").style.display = "none";
 document.getElementById("image").addEventListener("click", function(){
     let popupMenu = document.getElementById("popup");
@@ -29,3 +31,22 @@ searchbar.addEventListener("input", function(){
     
 })
 console.log(productsSuggest);
+
+/* CATEGORIES */
+
+document.getElementById("popupProduct").style.display = "none";
+document.getElementById("cat").addEventListener("click", function(){
+  let popupMenu = document.getElementById("popupProduct");
+  if (popupMenu.style.display === "none"){
+    popupMenu.style.display = "block";
+    popupMenu.animate([{opacity:'0.0'}, {opacity:'1.0'}],
+      {duration: 300, fill:'forwards'})
+  }else{
+    popupMenu.style.display = "none";
+  }
+});
+
+document.getElementById("buttonPopup").addEventListener("click", function() {
+  let popupMenu = document.getElementById("popupProduct");
+  popupMenu.style.display = "none";
+});
