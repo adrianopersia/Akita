@@ -342,7 +342,7 @@ footer .footerBelow .cardIcon{
     cursor: pointer;
     color: grey;
 }
-#popupProduct{
+#popupproduct{
     height: 35%;
     width: 90%;
     background: #5C5454;
@@ -353,26 +353,26 @@ footer .footerBelow .cardIcon{
     text-align: left;
     z-index:10;
 }
-#popupProduct ul{
+#popupproduct ul{
     list-style: none;
     padding: 0;
     margin: 0;
     margin-top: 10px;
 }  
-#popupProduct li{
+#popupproduct li{
     padding: 2%;
     border-bottom: 1px solid black;
     width: 80%;
     margin-left: 10px;
 }
-#popupProduct li a{
+#popupproduct li a{
     text-decoration: none;
     color: white;
 }
-#popupProduct li a:hover{
+#popupproduct li a:hover{
     color: grey;
 }
-#popupProduct button{
+#popupproduct button{
     width: 20%;
     display: block;
     margin: 20px auto;
@@ -386,7 +386,7 @@ footer .footerBelow .cardIcon{
     cursor: pointer;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
-#popupProduct button:hover{
+#popupproduct button:hover{
     background-color: grey;
 }
 
@@ -477,25 +477,15 @@ footer .footerBelow .cardIcon{
     align-items: center;
     font-family: 'Inconsolata', monospace;
     color: white;
-    transition: height .2s ease;
-}
-.wrapperUser.active{
-    height: 520px;
 }
 .wrapperUser .formBox{
     width: 100%;
     padding: 40px;
 }
-.wrapperUser .formBox.login{
-    display: none;
-}
-.wrapperUser.active .formBox.login{
-    transition: none;
-    transform: translateX(-400px);
-}
-.wrapper .formBox.register{
+
+.wrapperUser .formBox.register{
     position: absolute;
-    transform: translateX(600px);
+    transform: translateX(400px);
 }
 .wrapperUser .formBox h2{
     font-size: 40px;
