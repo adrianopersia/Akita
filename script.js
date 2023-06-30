@@ -50,3 +50,17 @@ document.getElementById("buttonPopup").addEventListener("click", function() {
   let popupMenu = document.getElementById("popupProduct");
   popupMenu.style.display = "none";
 });
+
+/* USER */
+
+const wrapper = document.querySelector('.wrapperUser');
+const loginLink = document.querySelector('.linkLogin');
+const registerLink = document.querySelector('.linkRegister');
+
+registerLink.addEventListener('click', function(){
+  wrapper.classList.add('active');
+})
+
+loginLink.addEventListener('click', function(){
+  wrapper.classList.remove('active');
+})

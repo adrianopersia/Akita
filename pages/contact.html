@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="cart">
+            <img src="/Akita/107831.png" alt="">
+        </div>
+        <img href="/index.html" class="logo" src="/Akita/akitainclogonegro.png" alt="">
+        <img src="/Akita/13838.png" id="image" alt="Image">
+        <div id="popup">
+            <div class="wrapper">
+                <div class="searchInput">
+                    <input id="searchBar" type="text" placeholder="Buscar...">
+                    <li class="suggestionsItems">Remeras</li>
+                    <li class="suggestionsItems">Pantalones</li>
+                    <li class="suggestionsItems">Buzos</li>
+                    <li class="suggestionsItems">Chalecos</li>
+                </div>
+            </div>
+            <ul>
+              <li><a href="/index.html">INICIO</a></li>
+              <li><a href="./products.html">PRODUCTOS</a></li>
+              <li><a href="./contact.html">CONTACTO</a></li>
+              <li><a href="./carrito.html">CARRITO</a></li>
+              <li><a href="./user.html">USUARIO</a></li>
+            </ul>
+            <button id="buttonPopup">Volver</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="textContact">
+            <h1 class="h1Contact">CONTACTANOS</h1>
+        </div>
+
+        <section class="info">
+            <h2>Nombre de la tienda</h2>
+            <p>direccion de la tienda, provincia, pais, etc</p>
+            <h2>Horarios</h2>
+            <p>horarios de atencion, etc</p>
+        </section>
+
+        <div class="contactForm">		
+                <form action="submeter-formulario.php" method="post">				
+                    <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">      
+
+                    <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+
+
+                    <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+	          	          
+                    <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario...">
+                    </textarea>                      
+                    <button href="#" id="buttonContact">Enviar</button>			
+                </form>	
+        </div>
+    </main>
+
+    <footer>
+        <ul class="footerMenu">
+            <li><a href="/index.html">INICIO</a></li>
+            <li><a href="./products.html">PRODUCTOS</a></li>
+            <li><a href="./contact.html">CONTACTO</a></li>
+            <li><a href="./carrito.html">CARRITO</a></li>
+            <li><a href="./user.html">USUARIO</a></li>
+        </ul>
+        <div class="footerRight">
+            <div class="text3">
+                <p class="p3">REDES</p>
+            </div>
+            <i href="https://www.instagram.com/akitainc_/" class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+        </div>
+        <div class="footerBelow">
+            <div class="text4">
+                <p class="p4">MEDIOS DE PAGO</p>
+            </div>
+            <img class="cardIcon" src="/Akita/visaicon.png" alt="">
+            <img class="cardIcon" src="/Akita/mastericon.png" alt="">
+            <img class="cardIcon" src="/Akita/mpicon.png" alt="">
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/54b9c45c97.js" crossorigin="anonymous"></script>
+    <script src="/models/product.js"></script>
+    <script src="/script.js"></script>
+
+
+</body>
+</html>

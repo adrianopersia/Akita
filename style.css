@@ -9,7 +9,6 @@ body{
     padding: 0;
     margin: 0;
     background-color: #242020;
-    height: 2200px;
 }
 header{
     align-items: center;
@@ -196,7 +195,7 @@ header{
     background-color: grey;
 }
 .mainContainer .imageIndexContainer .imageIndex{
-    height: 300px;
+    height: 250px;
 }
 .mainContainer .imageIndexContainer .productName{
     color: white;
@@ -229,6 +228,9 @@ header{
     font-size: 30px;
     cursor: pointer;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+#buttonProduct:hover{
+    background-color: grey;
 }
 
 footer{
@@ -388,5 +390,194 @@ footer .footerBelow .cardIcon{
     background-color: grey;
 }
 
+/* CONTACT */
 
+.textContact{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 60px;
+    background-color: #574848;
+    border-radius: 20px;
+    width: 80%;
+    height: 10px;
+    justify-content: center;
+}
+.h1Contact{
+    font-family: 'Inconsolata', monospace;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 40px;
+}
+.info h2{
+    margin-top: 20px;
+    font-family: 'Inconsolata', monospace;
+    color: white;
+    text-decoration: underline;
+    text-align: center;
+}
+.info p{
+    font-family: 'Inconsolata', monospace;
+    color: white;
+    text-align: center;
+}
+.contactForm form{
+    display: block;
+    text-align: center;
+    font-family: 'Inconsolata', monospace;
+    font-size: 25px;
+    color: white;
+    
+}
+.contactForm form input{
+    background-color: #4A4242;
+    padding: 2%;
+    margin: 2%;
+}
+.contactForm form textarea{
+    background-color: #4A4242;
+    padding: 2%;
+    margin: 2%;
+    width: 78%;
+    height: 200px;
+}
+#buttonContact{
+    width: 40%;
+    display: block;
+    margin: 20px auto;
+    background-color: #4A4242;
+    color: white;
+    padding: 10px 0;
+    border: 0;
+    outline: none;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+#buttonContact:hover{
+    background-color: grey;
+}
+
+/* USER */
+
+.wrapperUser{
+    position: relative;
+    width: 90%;
+    height: 100%;
+    margin: 100px 4% 100px;
+    background: transparent;
+    border: 2px solid #242020;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inconsolata', monospace;
+    color: white;
+    transition: height .2s ease;
+}
+.wrapperUser.active{
+    height: 520px;
+}
+.wrapperUser .formBox{
+    width: 100%;
+    padding: 40px;
+}
+.wrapperUser .formBox.login{
+    display: none;
+}
+.wrapperUser.active .formBox.login{
+    transition: none;
+    transform: translateX(-400px);
+}
+.wrapper .formBox.register{
+    position: absolute;
+    transform: translateX(600px);
+}
+.wrapperUser .formBox h2{
+    font-size: 40px;
+    text-align: center;
+}
+.wrapperUser .formBox form .inputBox{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+.wrapperUser .formBox form .inputBox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+.wrapperUser .formBox form .inputBox input:focus~label,
+.wrapperUser .formBox form .inputBox input:focus~label{
+    top: -5px;
+}
+.wrapperUser .formBox form .inputBox input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: white;
+    padding: 0 35px 0 5px;
+}
+.wrapperUser .formBox form .inputBox .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 30px;
+    color: white;
+    line-height: 50px;
+}
+.wrapperUser .formBox form .checkRememberForgot{
+    font-size: 15px;
+    color: white;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.wrapperUser .formBox form .checkRememberForgot label input{
+    accent-color: grey;
+    margin-right: 3px;
+}
+.wrapperUser .formBox form .checkRememberForgot a{
+    color: white;
+    text-decoration: none;
+}
+.wrapperUser .formBox form .checkRememberForgot a:hover{
+    color: grey;
+}
+.wrapperUser .formBox form .buttonUser{
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #4A4242;
+    color: white;
+    font-size: 20px;
+}
+.wrapperUser .formBox form .registerLogin{
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.wrapperUser .formBox form .registerLogin p a{
+    color: #4A4242;
+    text-decoration: none;
+}
+.wrapperUser .formBox form .registerLogin p a:hover{
+    text-decoration: underline;
+}
 
