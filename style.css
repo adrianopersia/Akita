@@ -477,15 +477,32 @@ footer .footerBelow .cardIcon{
     align-items: center;
     font-family: 'Inconsolata', monospace;
     color: white;
+    transition: height .2s ease;
+    overflow: hidden;
+}
+.wrapperUser.active{
+    height: 520px;
 }
 .wrapperUser .formBox{
     width: 100%;
     padding: 40px;
 }
-
+.wrapperUser .formBox.login{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+.wrapperUser.active .formBox.login{
+    transition: none;
+    transform: translateX(-400px);
+}
 .wrapperUser .formBox.register{
     position: absolute;
+    transition: none;
     transform: translateX(400px);
+}
+.wrapperUser.active .formBox.register{
+    transition: transform .18s ease;
+    transform: translateX(0);
 }
 .wrapperUser .formBox h2{
     font-size: 40px;
@@ -546,7 +563,7 @@ footer .footerBelow .cardIcon{
 .wrapperUser .formBox form .checkRememberForgot a:hover{
     color: grey;
 }
-.wrapperUser .formBox form .buttonUser{
+.wrapperUser .formBox .buttonUser{
     width: 100%;
     height: 30px;
     border: none;
