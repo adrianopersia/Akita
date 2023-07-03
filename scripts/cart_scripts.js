@@ -16,6 +16,13 @@ document.getElementById("buttonPopup").addEventListener("click", function() {
 });
 
 /* CART CODE */
+const productsInCart = [];
+const mainContainer = document.getElementById("mainContainer");
+
+window.addEventListener("load",()=>{
+    fillmainContainer();
+});
+
 
 let visibleCart = false; //mantiene el estado visible del carrito
 
@@ -51,10 +58,11 @@ function ready(){ //funcionalidad a eliminar
     for(let i=0;i<addCartButton.length;i++){
         let button = addCartButton[i];
         button.addEventListener('click',addCartClicked);
+        console.log(button);
     }
 
     //agregamos funcionalidad al boton pagar
-    document.getElementsByClassName('payButton')[0].addEventListener('click',payClicked);
+    //document.getElementsByClassName('payButton')[0].addEventListener('click',payClicked);
 }
 
 function itemDeleteCart(event){ //elimina item
@@ -190,4 +198,29 @@ function payClicked(event){
     }
     TotalCartUpdate();
 
+}
+
+const createProductCart = (product) =>{
+    const productCartHTML = 
+    `
+    <div class="imageIndexContainer">
+    <div class="container">
+        <img class="imageIndex" src="${product.image}" alt="">
+        <a href="" class="button">Comprar</a>
+    </div>
+    <div>
+        <p class="productName">${product.name}<p>
+        <p class="priceBackground">$${product.price}</p></div>
+    </div>
+    `
+    return productCartHTML;
+}
+const fillmainContainer = () =>{
+    mainContainer.innerHTML = '';
+    for(const product of Product.getFakeData()){
+        console.log(product);
+        mainContainer.innerHTML += createProductCart(product);
+        
+    }
+    console.log(mainContainer.innerHTML);
 }
