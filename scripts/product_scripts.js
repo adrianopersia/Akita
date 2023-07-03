@@ -26,3 +26,7 @@ document.getElementById("buttonPopup").addEventListener("click", function() {
     let popupProduct = document.getElementById("popupproduct");
     popupProduct.style.display = "none";
 });
+
+
+
+    

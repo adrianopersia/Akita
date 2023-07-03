@@ -588,3 +588,117 @@ footer .footerBelow .cardIcon{
     text-decoration: underline;
 }
 
+/* CART */
+.carts{
+    border: 2px solid #574848;
+    width: 85%;
+    margin: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.carts .headerCart{
+    background-color: #574848;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    font-family: 'Inconsolata', monospace;
+}
+.carts .itemsCart .itemCart{
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 2px solid #574848;
+    padding: 20px;
+    color: white;
+}
+.carts .itemsCart .itemCart img{
+    margin-right: 20px;
+}
+.carts .itemsCart .itemCart .itemCartDetails .itemCartTitle{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.carts .itemsCart .itemCart .itemCartDetails .quantitySelector{
+    display: inline-block;
+    margin-right: 25px;
+}
+.carts .itemsCart .itemCart .itemCartDetails .quantitySelector .itemCartQuantity{
+    border: none;
+    font-size: 18px;
+    background: transparent;
+    display: inline-block;
+    width: 30px;
+    padding: 5px;
+    text-align: center;
+    color: white;
+}
+.carts .itemsCart .itemCart .itemCartDetails .quantitySelector i{
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid #574848;
+    background-color: grey;
+    cursor: pointer;
+}
+.carts .itemsCart .itemCart .itemCartDetails .itemCartPrice{
+    font-weight: bold;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.carts .itemsCart .itemCart .buttonDelete{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: black;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid #574848;
+    cursor: pointer;
+    display: block;
+    background-color: grey;
+    z-index: 20;
+}
+.carts .itemsCart .itemCart .buttonDelete i{
+    pointer-events: none;
+}
+.cartTotal{
+    background-color: #574848;
+    padding: 30px;
+}
+.cartTotal .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.cartTotal .payButton{
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #242020;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+.cartTotal .payButton:hover{
+    scale: 1.05;
+}
