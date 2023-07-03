@@ -3,6 +3,7 @@ class Product{
     name;
     price;
     category;
+    
   
     constructor(image,name,price,category){
         this.image = image; 
