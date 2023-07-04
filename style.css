@@ -333,6 +333,9 @@ footer .footerBelow .cardIcon{
 
 /* PRODUCTS */
 
+.categoriesAside{
+    display: none;
+}
 .categories{
     font-family: 'Inconsolata', monospace;
     font-size: 30px;
@@ -1139,171 +1142,122 @@ footer .footerBelow .cardIcon{
     /* PRODUCTS */
 
     .categories{
-        font-family: 'Inconsolata', monospace;
-        font-size: 40px;
+        display: none;
+    }
+    .categoriesAside{
+        margin-top: 10%;
+        display: block;
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    .categoriesAside ul{
+        padding-left: 5%;
+    }
+    .categoriesAside ul li{
+        list-style: none;
+        padding-bottom: 5%;
+    }
+    .categoriesAside ul li a{
         color: white;
-        margin-top: 5%;
-        margin-left: 5%;
+        text-decoration: none;
+        margin-left: 0;
+        font-size: 35px;
+        border-bottom: 2px solid #4A4242;
+        padding-bottom: 2%;
     }
-    .categories p{
-        font-size: 45px;
-        display: inline;
-        text-decoration: underline;
-    }
-    .categories p:hover{
-        cursor: pointer;
+    .categoriesAside ul li a:hover{
         color: grey;
     }
-    #popupproduct{
-        height: 40%;
+    .mainProduct{
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 100%;
     }
-    #popupproduct li{
-        border-bottom: 2px solid black;
-        width: 90%;
+    .mainContainer{
+        grid-row: 1/2;
+        grid-column: 2/3;
     }
-    #popupproduct li a{
-        font-size: 25px;
+    .mainContainer .imageIndexContainer .container{
+        position: relative;
+        display: inline-block;
     }
-    #popupproduct button{
-        font-size: 30px;
+    .mainContainer .imageIndexContainer .imageIndex{
+        height: 480px;
     }
-
-    /* CONTACT */
-
-    .textContact{
-        margin-top: 80px;
-    }
-    .h1Contact{
-        font-size: 70px;
-        margin-bottom: 50px;
-    }
-    .info h2{
-        font-size: 35px;
-    }
-    .info p{
-        font-size: 30px;
-    }
-    .contactForm form{
-        font-size: 30px;
-    }
-    .contactForm form input{
-        width: 80%;
-    }
-    .contactForm form textarea{
-        width: 80%;
-        height: 300px;
-    }
-    #buttonContact{
-        font-size: 35px;
+    .mainContainer .imageIndexContainer .productName{
+        font-size: 38px;
     }
 
     /* USER */
 
-    .wrapperUser{
-        position: relative;
-        width: 90%;
-        height: 100%;
-        margin: 100px 4% 100px;
-        background: transparent;
-        border: 2px solid #242020;
-        border-radius: 20px;
-        backdrop-filter: blur(20px);
-        box-shadow: 0 0 30px black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: 'Inconsolata', monospace;
-        color: white;
-        transition: height .2s ease;
-        overflow: hidden;
-    }
-    .wrapperUser.active{
-        height: 520px;
-    }
-    .wrapperUser .formBox{
-        width: 100%;
-        padding: 40px;
-    }
     .wrapperUser.active .formBox.login{
-        transform: translateX(-1000px);
+        transform: translateX(-1500px);
     }
     .wrapperUser .formBox.register{
-        transform: translateX(1000px);
+        transform: translateX(1500px);
     }
-    .wrapperUser.active .formBox.register{
-        transition: transform .18s ease;
-        transform: translateX(0);
+}
+
+@media screen and (min-width: 1920px){
+    #navContainer ul li a{
+        font-size: 40px;
     }
-    .wrapperUser .formBox h2{
-        font-size: 50px;
+    .carousel{
+        padding-top: 5%;
+        padding-bottom: 50px;
+        height: 600px;
     }
-    .wrapperUser .formBox form .inputBox{
-        height: 60px;
+    .mainContainer .imageIndexContainer{
+        display: inline-block;
+        margin-left: 10%;
+        padding-top: 5%;
+        padding-left: 0;
+        padding-bottom: 2%;
     }
-    .wrapperUser .formBox form .inputBox label{
+    .mainContainer .imageIndexContainer .container .button{
         font-size: 35px;
+        top: 50%;
     }
-    .wrapperUser .formBox form .inputBox input{
-        font-size: 30px;
+    .mainContainer .imageIndexContainer div{
+        padding: 0;
     }
-    .wrapperUser .formBox form .inputBox .icon{
-        font-size: 35px;
+    .mainContainer .imageIndexContainer .container .imageIndex{
+        height: 750px;
     }
-    .wrapperUser .formBox form .checkRememberForgot{
-        font-size: 25px;
+    .mainContainer .imageIndexContainer .productName{
+        text-align: center;
+        font-size: 80px;
     }
-    .wrapperUser .formBox form .checkRememberForgot label input{
-        transform: scale(1.5);
-    }
-    .wrapperUser .formBox form .checkRememberForgot a{
-        font-size: 25px;
-    }
-    .wrapperUser .formBox .buttonUser{
-        height: 40px;
-        font-size: 30px;
-    }
-    .wrapperUser .formBox form .registerLogin{
-        font-size: 30px;
+    .mainContainer .imageIndexContainer .priceBackground{
+        margin-left: 0;
+        font-size: 45px;
     }
 
-    /* CART */
-    .carts{
-        width: 92%;
-    }
-    .carts .headerCart{
-        font-size: 30px;
-    }
-    .carts .itemsCart .itemCart{
-        display: flex;
-        align-items: center;
+    /* PRODUCTS */
+
+    .mainContainer .imageIndexContainer .container{
         position: relative;
-        border-bottom: 2px solid #574848;
-        padding: 20px;
-        color: white;
+        display: inline-block;
     }
-    .carts .itemsCart .itemCart img{
-        margin-right: 20px;
+    .mainContainer .imageIndexContainer .container .imageIndex{
+        height: 600px;
     }
-    .carts .itemsCart .itemCart .itemCartDetails .itemCartTitle{
-        font-size: 25px;
+    .mainContainer .imageIndexContainer .productName{
+        font-size: 38px;
     }
-    .carts .itemsCart .itemCart .itemCartDetails .quantitySelector .itemCartQuantity{
-        font-size: 25px;
+
+    /* CONTACT */
+
+    footer{
+        height: 650px;
     }
-    .carts .itemsCart .itemCart .itemCartDetails .itemCartPrice{
-        display: block;
-        font-size: 25px;
+
+    /* USER */
+
+    .wrapperUser.active .formBox.login{
+        transform: translateX(-2000px);
     }
-    .carts .itemsCart .itemCart .buttonDelete{
-        transform: scale(1.2);
-        right: 20px;
-        top: 20px;
+    .wrapperUser .formBox.register{
+        transform: translateX(2000px);
     }
-    .cartTotal .row{
-        font-size: 30px;
-        margin-bottom: 15px;
-    }
-    .cartTotal .payButton{
-        font-size: 25px;
-    } 
 }
