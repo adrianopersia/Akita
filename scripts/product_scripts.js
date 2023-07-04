@@ -10,6 +10,11 @@ document.getElementById("image").addEventListener("click", function(){
     }
 });
 
+document.getElementById("buttonPopup").addEventListener("click", function() {
+  let popupMenu = document.getElementById("popup");
+  popupMenu.style.display = "none";
+});
+
 document.getElementById("popupproduct").style.display = "none";
 document.getElementById("cat").addEventListener("click", function(){
     let popupProduct = document.getElementById("popupproduct");
@@ -23,8 +28,8 @@ document.getElementById("cat").addEventListener("click", function(){
 });
 
 document.getElementById("buttonPopup").addEventListener("click", function() {
-    let popupProduct = document.getElementById("popupproduct");
-    popupProduct.style.display = "none";
+  let popupProduct = document.getElementById("popupproduct");
+  popupProduct.style.display = "none";
 });
 
 /* CART */

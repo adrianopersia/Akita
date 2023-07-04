@@ -10,10 +10,19 @@
 <body>
     <header>
         <div class="cart">
-            <img src="/Akita/107831.png" alt="">
+            <a href="/pages/carrito.html"><img src="/Akita/107831.png" alt=""></a>
         </div>
         <img href="index.html" class="logo" src="/Akita/akitainclogonegro.png" alt="">
         <img src="/Akita/13838.png" id="image" alt="Image">
+        <nav id="navContainer">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="/pages/products.html">PRODUCTOS</a></li>
+                <li><a href="/pages/contact.html">CONTACTO</a></li>
+                <li><a href="/pages/carrito.html">CARRITO</a></li>
+                <li><a href="/pages/user.html">USUARIO</a></li>
+              </ul>
+        </nav>
         <div id="popup">
             <div class="wrapper">
                 <div class="searchInput">
@@ -46,38 +55,15 @@
         <div class="text2">
             <p class="p2">NOVEDADES</p>
         </div>
-        <section class="mainContainer">
-            <div class="imageIndexContainer">
-                <div class="container">
-                    <img class="imageIndex" src="/Akita/05 calabera jaspeada frente.jpg" alt="">
-                    <a href="" class="button">Comprar</a>
-                </div>
-                <div>
-                    <p class="productName">Calavera Jaspeada<p>
-                    <p class="priceBackground">$5.000</p></div>
-            </div>
 
-            <div class="imageIndexContainer">
-                <div class="container">
-                    <img class="imageIndex" src="/Akita/06 disaster violeta frente.jpg" alt="">
-                    <a href="" class="button">Comprar</a>
-                </div>
-                <div>
-                    <p class="productName">Disaster Violeta<p>
-                    <p class="priceBackground">$5.000</p></div>
-            </div>
-
-            <div class="imageIndexContainer">
-                <div class="container">
-                    <img class="imageIndex" src="/Akita/10 calabera marrón frente.jpg" alt="">
-                    <a href="" class="button">Comprar</a>
-                </div>
-                <div>
-                    <p class="productName">Calavera Marron<p>
-                    <p class="priceBackground">$5.000</p></div>
-            </div>
+        <section class="mainContainer" id="mainContainer">
+            
         </section>
-        <button href="./pages/products.html" id="buttonProduct">Ver Más</button>
+
+        <div class="endButton">
+            <a href="/pages/products.html"><button id="buttonProduct">Ver Más</button></a>
+        </div>
+        
     </main>
     <footer>
         <ul class="footerMenu">
@@ -107,7 +93,7 @@
 
 
     <script src="https://kit.fontawesome.com/54b9c45c97.js" crossorigin="anonymous"></script>
-    <script src="./models/product.js"></script>
+    <script src="/models/product.js"></script>
     <script src="script.js"></script>
     
 </body>

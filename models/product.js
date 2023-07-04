@@ -15,6 +15,10 @@ class Product{
         return[
             new Product("/Akita/IMG_3417.jpg", "Stylish T-shirt", 1200, "remeras"),
             new Product("/Akita/IMG_3420.jpg", "Stylish T-shirt", 1200, "remeras"),
+            new Product("/Akita/IMG_3466.jpg", "Stylish T-shirt", 1200, "remeras"),
+            new Product("/Akita/IMG_4260.jpg", "Stylish T-shirt", 1200, "remeras"),
+            new Product("/Akita/IMG_4306.jpg", "Stylish T-shirt", 1200, "remeras"),
+            new Product("/Akita/IMG_4352.jpg", "Stylish T-shirt", 1200, "remeras"),
           ];
     }
     static getSuggestions(){

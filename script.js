@@ -29,6 +29,39 @@ console.log(productsSuggest);
 */
 
 
+/* CART */
+const productsInCart = [];
+const mainContainer = document.getElementById("mainContainer");
+
+window.addEventListener("load",()=>{
+  fillmainContainer();
+});
+
+const createProductCart = (product) =>{
+  const productCartHTML = 
+  `
+  <div class="imageIndexContainer">
+  <div class="container">
+      <img class="imageIndex" src="${product.image}" alt="">
+      <a href="#" class="button" onclick="${productsInCart.push(JSON.stringify(product))}">Comprar</a>
+  </div>
+  <div>
+      <p class="productName">${product.name}<p>
+      <p class="priceBackground">$${product.price}</p></div>
+  </div>
+  `
+  return productCartHTML;
+}
+
+const fillmainContainer = () =>{
+  mainContainer.innerHTML = '';
+  for(const product of Product.getFakeData()){
+      mainContainer.innerHTML += createProductCart(product);
+
+  }
+  //console.log(mainContainer.innerHTML);
+}
+
 
 
 
