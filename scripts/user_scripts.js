@@ -4,14 +4,26 @@ const registerLink = document.querySelector('.linkRegister');
 const userName = document.getElementById("user");
 const getEmail = document.getElementById("mail");
 const getPass = document.getElementById("pass");
+const registerButton = document.getElementById('registerBack');
 
-registerLink.addEventListener("click", function() {
-  wrapper.classList.add("active");
+registerButton.addEventListener("click", async function(){
   const userMap = {
-    "name":userName.value,
-    "password:":getPass.value,
-    "email":getEmail.value 
-  }
+    name: userName.value,
+    password: getPass.value,
+    email: getEmail.value 
+  };
+  console.log(userMap);
+  const response = await axios.post("http://localhost:8000/api/users/create", {
+    data: JSON.stringify(userMap),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+  console.log(response.data);
+});
+
+registerLink.addEventListener("click", async function() { //no es secuencial espera a que axios traiga la respuesta
+  wrapper.classList.add("active");
 });
 
 loginLink.addEventListener("click", function() {
