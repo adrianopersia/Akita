@@ -42,27 +42,51 @@ window.addEventListener("load",()=>{
 });
 
 const createProductCart = (product) =>{
-  const productCartHTML = 
-  `
-  <div class="imageIndexContainer">
-  <div class="container">
-      <img class="imageIndex" src="${product.image}" alt="">
-      <a href="#" class="button" onclick="${productsInCart.push(JSON.stringify(product))}">Comprar</a>
-  </div>
-  <div>
-      <p class="productName">${product.name}<p>
-      <p class="priceBackground">$${product.price}</p></div>
-  </div>
-  `
-  return productCartHTML;
+  const imageIndexContainerElement = document.createElement('div');
+  imageIndexContainerElement.className = "imageIndexContainer";
+
+  const containerElement = document.createElement('div');
+  containerElement.className = "container";
+  
+  const imageIndexElement = document.createElement('img');
+  imageIndexElement.className = "imageIndex";
+  imageIndexElement.src = product.image;
+
+  const buttonElement = document.createElement("a");
+  buttonElement.className = "button";
+  buttonElement.innerText = "Comprar";
+  buttonElement.addEventListener("click", ()=>{
+    productsInCart.push(product);
+    console.table(productsInCart);
+  })
+
+  const divElement = document.createElement("div");
+
+  const productNameElement = document.createElement("p");
+  productNameElement.innerText = product.name;
+  productNameElement.className = "productName"
+
+  const priceBackgroundElement = document.createElement("p");
+  priceBackgroundElement.innerText = `$${product.price}`;
+  priceBackgroundElement.className = "priceBackground";
+
+  containerElement.appendChild(imageIndexElement);
+  containerElement.appendChild(buttonElement);
+  
+  divElement.appendChild(productNameElement);
+  divElement.appendChild(priceBackgroundElement);
+
+  imageIndexContainerElement.appendChild(containerElement);
+  imageIndexContainerElement.appendChild(divElement);
+
+  mainContainer.appendChild(imageIndexContainerElement);
 }
 
+
 const fillmainContainer = () =>{
-  mainContainer.innerHTML = '';
   for(const product of Product.getFakeData()){
-      mainContainer.innerHTML += createProductCart(product);
+      createProductCart(product);
   }
-  //console.log(mainContainer.innerHTML);
 }
 
 
