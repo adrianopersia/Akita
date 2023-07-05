@@ -1,10 +1,17 @@
 const wrapper = document.querySelector('.wrapperUser');
 const loginLink = document.querySelector('.linkLogin');
 const registerLink = document.querySelector('.linkRegister');
+const userName = document.getElementById("user");
+const getEmail = document.getElementById("mail");
+const getPass = document.getElementById("pass");
 
 registerLink.addEventListener("click", function() {
   wrapper.classList.add("active");
-  console.log("mati");
+  const userMap = {
+    "name":userName.value,
+    "password:":getPass.value,
+    "email":getEmail.value 
+  }
 });
 
 loginLink.addEventListener("click", function() {
@@ -27,3 +34,4 @@ document.getElementById("buttonPopup").addEventListener("click", function() {
     let popupMenu = document.getElementById("popup");
     popupMenu.style.display = "none";
 });
+

@@ -45,11 +45,11 @@ header{
     height: 60px;
 }
 #popup{
-    height: 35%;
+    height: 50%;
     width: 90%;
     background: #5C5454;
     position: absolute;
-    top: 25%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: left;
@@ -735,7 +735,8 @@ footer .footerBelow .cardIcon{
         height: 80px;
     }
     #popup{
-        height: 40%;
+        height: 70%;
+        top: 50%;
     }
     .wrapper .searchInput{
         width: 110%;
@@ -1027,6 +1028,9 @@ footer .footerBelow .cardIcon{
 }
 
 @media screen and (min-width: 1440px){
+    #popup{
+        height: 60%;
+    }
     #navContainer{
         display: block;
         grid-column: 2/3;
@@ -1081,9 +1085,9 @@ footer .footerBelow .cardIcon{
     }
     .mainContainer .imageIndexContainer{
         display: inline-block;
-        margin-left: 8%;
-        padding-top: 5%;
-        padding-left: 0;
+        padding: 0;
+        padding-left: 5%;
+        padding-top: 2%;
     }
     .mainContainer .imageIndexContainer .container .button{
         font-size: 35px;
@@ -1199,6 +1203,9 @@ footer .footerBelow .cardIcon{
 }
 
 @media screen and (min-width: 1920px){
+    #popup{
+        height: 55%;
+    }
     #navContainer ul li a{
         font-size: 40px;
     }
@@ -1209,9 +1216,9 @@ footer .footerBelow .cardIcon{
     }
     .mainContainer .imageIndexContainer{
         display: inline-block;
-        margin-left: 10%;
-        padding-top: 5%;
-        padding-left: 0;
+        padding: 0;
+        padding-left: 7%;
+        padding-top: 2%;
         padding-bottom: 2%;
     }
     .mainContainer .imageIndexContainer .container .button{

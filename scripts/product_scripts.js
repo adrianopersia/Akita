@@ -33,6 +33,7 @@ document.getElementById("buttonPopup").addEventListener("click", function() {
 });
 
 /* CART */
+
 const productsInCart = [];
 const mainContainer = document.getElementById("mainContainer");
 
@@ -60,10 +61,12 @@ const fillmainContainer = () =>{
   mainContainer.innerHTML = '';
   for(const product of Product.getFakeData()){
       mainContainer.innerHTML += createProductCart(product);
-
   }
   //console.log(mainContainer.innerHTML);
 }
+
+
+
 
 
 

@@ -191,8 +191,10 @@ function payClicked(event){
         itemsCart.removeChild(itemsCart.firstChild);
     }
     TotalCartUpdate();
-
 }
+
+
+
 
 
 
