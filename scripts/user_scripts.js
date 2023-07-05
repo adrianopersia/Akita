@@ -16,11 +16,13 @@ registerButton.addEventListener('click', () => {
   })
   .then(function (response) {
     if(response.status == 201){
-     // informar que el se registro el usuario
+        alert("Usuario creado con exito, disfrute!");
     }
   })
   .catch(function (error) {
-    // informar error
+    if(response == error){
+      alert("Error al crear usuario, actualice y vuelva a intentarlo.");
+    }
   });
 })
 
@@ -32,17 +34,14 @@ document.getElementById('loginButton').addEventListener('click',() => {
   .then(function (response) {
     console.log(response.data['token']);
     const token = response.data['token']
-    if(token){
-      /*
-          logica para mostrar un mensaje de exito
-      */
+    if(response.status == 200){
+      alert("Bienvenido!");
     }
   })
   .catch(function (error) {
-    console.log(error);
-    /*
-      logica para mostrar un error 
-    */
+    if(response == error){
+      alert("Error al iniciar sesion, actualice y vuelva a intentarlo.")
+    }
   });
 
 })
