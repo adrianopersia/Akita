@@ -57,7 +57,7 @@ const createProductCart = (product) =>{
   buttonElement.innerText = "Comprar";
   buttonElement.addEventListener("click", ()=>{
     productsInCart.push(product);
-    console.table(productsInCart);
+    sessionStorage.setItem("cart",JSON.stringify(productsInCart));
   })
 
   const divElement = document.createElement("div");

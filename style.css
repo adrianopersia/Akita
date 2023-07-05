@@ -1027,6 +1027,181 @@ footer .footerBelow .cardIcon{
     }
 }
 
+@media screen and (min-width: 1360px){
+    #popup{
+        height: 60%;
+    }
+    #navContainer{
+        display: block;
+        grid-column: 2/3;
+    }
+    #navContainer ul{
+        display: flex;
+        padding-right: 20px;
+        list-style: none;
+    }
+    #navContainer ul li a{
+        font-family: 'Inconsolata', monospace;
+        padding-right: 10px;
+        padding-left: 10px;
+        border-right: 1px solid black;
+        font-size: 25px;
+        color: black;
+        text-decoration: none;
+    }
+    #navContainer ul li a:hover{
+        color: grey;
+    }
+    #image{
+        display: none;
+    }
+    .logo{
+        padding: 2%;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .cart{
+        grid-row: 1/2;
+        grid-column: 3/4;
+    }
+    .carousel{
+        padding-top: 5%;
+        padding-bottom: 50px;
+        height: 550px;
+    }
+    .text1{
+        height: 60px;
+    }
+    .p1{
+        font-size: 40px;
+    }
+    .text2{
+        margin-top: 90px;
+        height: 15px;
+    }
+    .p2{
+        font-size: 85px;
+        margin-bottom: 60px;
+    }
+    .mainContainer .imageIndexContainer{
+        display: inline-block;
+        padding: 0;
+        padding-left: 5%;
+        padding-top: 2%;
+    }
+    .mainContainer .imageIndexContainer .container .button{
+        font-size: 35px;
+        top: 50%;
+    }
+    .mainContainer .imageIndexContainer .imageIndex{
+        height: 600px;
+    }
+    .mainContainer .imageIndexContainer .productName{
+        text-align: right;
+        font-size: 50px;
+    }
+    .mainContainer .imageIndexContainer .priceBackground{
+        margin-left: 5%;
+        font-size: 45px;
+    }
+    #buttonProduct{
+        font-size: 40px;
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+    footer{
+        height: 550px;
+    }
+    footer .footerMenu li a{
+        font-size: 40px;
+    }
+    footer .footerRight i{
+        padding: 2%;
+        font-size: 100px;
+    }
+    .footerRight .text3{
+        margin-top: 60px;
+    }
+    .footerRight .text3 .p3{
+        font-size: 45px;
+        padding-left: 5%;
+        margin-bottom: 35px;
+    }
+    .footerBelow .text4{
+        margin-top: 35px;
+        width: 45%;
+        margin-left: 2%;
+    }
+    .footerBelow .text4 .p4{
+        font-size: 45px;
+        padding: 2%;
+        margin-bottom: 35px;
+    }
+    
+    footer .footerBelow .cardIcon{
+        height: 100px;
+        margin-left: 30px;
+    }
+
+    /* PRODUCTS */
+
+    .categories{
+        display: none;
+    }
+    .categoriesAside{
+        margin-top: 10%;
+        display: block;
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    .categoriesAside ul{
+        padding-left: 5%;
+    }
+    .categoriesAside ul li{
+        list-style: none;
+        padding-bottom: 5%;
+    }
+    .categoriesAside ul li a{
+        color: white;
+        text-decoration: none;
+        margin-left: 0;
+        font-size: 35px;
+        border-bottom: 2px solid #4A4242;
+        padding-bottom: 2%;
+    }
+    .categoriesAside ul li a:hover{
+        color: grey;
+    }
+    .mainProduct{
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 100%;
+    }
+    .mainContainer{
+        grid-row: 1/2;
+        grid-column: 2/3;
+    }
+    .mainContainer .imageIndexContainer .container{
+        position: relative;
+        display: inline-block;
+    }
+    .mainContainer .imageIndexContainer .imageIndex{
+        height: 480px;
+    }
+    .mainContainer .imageIndexContainer .productName{
+        font-size: 38px;
+    }
+
+    /* USER */
+
+    .wrapperUser.active .formBox.login{
+        transform: translateX(-1500px);
+    }
+    .wrapperUser .formBox.register{
+        transform: translateX(1500px);
+    }
+}
+
 @media screen and (min-width: 1440px){
     #popup{
         height: 60%;

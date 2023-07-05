@@ -1,3 +1,4 @@
+let productsInCart = [];
 document.getElementById("popup").style.display = "none";
 document.getElementById("image").addEventListener("click", function(){
     let popupMenu = document.getElementById("popup");
@@ -14,6 +15,19 @@ document.getElementById("buttonPopup").addEventListener("click", function() {
     let popupMenu = document.getElementById("popup");
     popupMenu.style.display = "none";
 });
+
+
+window.addEventListener("load", ()=>{
+    const productsInCartJsonString = sessionStorage.getItem("cart");
+    if(productsInCartJsonString){
+        productsInCart = JSON.parse(productsInCartJsonString);
+    }
+    
+    console.table(productsInCart);
+})
+
+
+
 
 /* CART CODE */
 
