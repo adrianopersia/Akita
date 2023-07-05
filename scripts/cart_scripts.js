@@ -22,14 +22,68 @@ window.addEventListener("load", ()=>{
     if(productsInCartJsonString){
         productsInCart = JSON.parse(productsInCartJsonString);
     }
-    
-    console.table(productsInCart);
+    let amount = 0;
+    for(const product of productsInCart){
+        createProductCart(product);
+        amount += product.price;
+    }
+    itemCart.innerHTML += `
+    <div class="cartTotal">
+                    <div class="row">
+                        <strong>Total</strong>
+                        <span class="cartTotalPrice">
+                            $${amount}
+                        </span>
+                    </div>
+                    <button class="payButton" id="payButton">Pagar <i class="fa-solid fa-sack-dollar"></i></button>
+                </div>
+
+    `
+    const payButton = document.getElementById("payButton");
+    payButton.addEventListener("click", ()=> {
+        alert("Gracias por su compra!");
+        itemCart.style.display = "none"
+    })
 })
 
+const itemCart = document.getElementById('itemsCart');
 
+const createProductCart = (product) =>{
+    const imageIndexContainerCart = document.createElement('div');
+    imageIndexContainerCart.className = "itemCart";
+    
+    const imageIndexCart = document.createElement('img');
+    imageIndexCart.className = "cartImage";
+    imageIndexCart.style.height = "150px"
+    imageIndexCart.src = product.image;
 
+    const containerCart = document.createElement('div');
+    containerCart.className = "itemCartDetails";
 
-/* CART CODE */
+    const productNameCart = document.createElement("span");
+    productNameCart.className = "itemCartTitle";
+    productNameCart.style.fontSize = "30px";
+    productNameCart.style.fontWeight = "bold";
+    productNameCart.innerText = product.name + "\n";
+
+    const divElement = document.createElement("div");
+  
+    const priceBackgroundCart = document.createElement("span");
+    priceBackgroundCart.innerText = `$${product.price}`;
+    priceBackgroundCart.className = "itemCartPrice";
+    priceBackgroundCart.style.fontSize = "30px";
+  
+    imageIndexContainerCart.appendChild(imageIndexCart);
+    
+    divElement.appendChild(productNameCart);
+    divElement.appendChild(priceBackgroundCart);
+  
+    imageIndexContainerCart.appendChild(divElement);
+  
+    itemCart.appendChild(imageIndexContainerCart);
+  }
+
+/* A MEJORAR 
 
 
 let visibleCart = false; //mantiene el estado visible del carrito
@@ -39,6 +93,8 @@ if(document.readyState=='loading'){ //carga todos los elementos de la pagina y l
 }else{
     ready();
 }
+
+
 
 function ready(){ //funcionalidad a eliminar
     let itemDeleteButton = document.getElementsByClassName('buttonDelete');
@@ -132,19 +188,6 @@ function restQuantity(event){
     
 }
 
-function addCartClicked(event){
-    let button = event.target;
-    let item = button.parentElement;
-    let title = item.getElementsByClassName('productName')[0].innerText;
-    console.log(title);
-    let price = item.getElementsByClassName('itemCartPrice')[0].innerText;
-    let imageSrc = item.getElementsByClassName('imageIndex')[0].src;
-    console.log(imageSrc)
-
-    //agrega elementos al carrito. Enviamos por parametro los valores
-    addItemCart(title, price, imageSrc);
-}
-
 function addItemCart(title, price, imageSrc){
     let item = document.createElement('div');
     item.classList.add = 'item';
@@ -206,7 +249,7 @@ function payClicked(event){
     }
     TotalCartUpdate();
 }
-
+*/
 
 
 

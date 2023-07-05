@@ -30,7 +30,7 @@ const createProductCart = (product) =>{
   <div class="imageIndexContainer">
   <div class="container">
       <img class="imageIndex" src="${product.image}" alt="">
-      <a href="#" class="button" onclick="${productsInCart.push(JSON.stringify(product))}">Comprar</a>
+      <a href="/pages/products.html" class="button" onclick="${productsInCart.push(JSON.stringify(product))}">Comprar</a>
   </div>
   <div>
       <p class="productName">${product.name}<p>
