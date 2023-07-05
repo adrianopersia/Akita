@@ -4,7 +4,25 @@ const registerLink = document.querySelector('.linkRegister');
 const userName = document.getElementById("user");
 const getEmail = document.getElementById("mail");
 const getPass = document.getElementById("pass");
+const getEmailReg = document.getElementById("mailRegister");
+const getPassReg = document.getElementById("passRegister");
 const registerButton = document.getElementById('registerBack');
+
+registerButton.addEventListener('click', () => {
+  axios.post('http://localhost:8000/api/users/create', {
+    name: userName.value,
+    email: getEmailReg.value,
+    password: getPassReg.value
+  })
+  .then(function (response) {
+    if(response.status == 201){
+     // informar que el se registro el usuario
+    }
+  })
+  .catch(function (error) {
+    // informar error
+  });
+})
 
 document.getElementById('loginButton').addEventListener('click',() => {
   axios.post('http://localhost:8000/api/auth/login', {
@@ -28,22 +46,6 @@ document.getElementById('loginButton').addEventListener('click',() => {
   });
 
 })
-
-registerButton.addEventListener("click", async function(){
-  const userMap = {
-    name: userName.value,
-    password: getPass.value,
-    email: getEmail.value 
-  };
-  console.log(userMap);
-  const response = await axios.post("http://localhost:8000/api/users/create", {
-    data: JSON.stringify(userMap),
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  });
-  console.log(response.data);
-});
 
 registerLink.addEventListener("click", async function() { //no es secuencial espera a que axios traiga la respuesta
   wrapper.classList.add("active");
