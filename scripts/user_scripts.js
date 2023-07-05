@@ -6,6 +6,29 @@ const getEmail = document.getElementById("mail");
 const getPass = document.getElementById("pass");
 const registerButton = document.getElementById('registerBack');
 
+document.getElementById('loginButton').addEventListener('click',() => {
+  axios.post('http://localhost:8000/api/auth/login', {
+    email: getEmail.value,
+    password: getPass.value
+  })
+  .then(function (response) {
+    console.log(response.data['token']);
+    const token = response.data['token']
+    if(token){
+      /*
+          logica para mostrar un mensaje de exito
+      */
+    }
+  })
+  .catch(function (error) {
+    console.log(error);
+    /*
+      logica para mostrar un error 
+    */
+  });
+
+})
+
 registerButton.addEventListener("click", async function(){
   const userMap = {
     name: userName.value,
@@ -44,6 +67,5 @@ document.getElementById("image").addEventListener("click", function(){
 
 document.getElementById("buttonPopup").addEventListener("click", function() {
     let popupMenu = document.getElementById("popup");
-    popupMenu.style.display = "none";
+    popupMenu.style.display = "none";
 });
-
